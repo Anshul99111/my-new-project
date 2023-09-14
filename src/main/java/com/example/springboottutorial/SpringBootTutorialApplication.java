@@ -19,4 +19,9 @@ public class SpringBootTutorialApplication {
 		return String.format("Hello %s!", name);
 	}
 
+	@GetMapping("/hi")
+	public String sayHi(@RequestParam(value = "myName", defaultValue = "World") String name) {
+		return String.format("Hi %s!", name);
+	}
+
 }
